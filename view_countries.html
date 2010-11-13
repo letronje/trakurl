@@ -1,0 +1,33 @@
+<html>
+	<body>
+		<table border="1">
+			<tr>
+				<th>Country</th>
+				<th>Hits</th>
+			</tr>
+		{% for url_hit in url_hits %}
+			<tr>
+				<td>{{ url_hit.url|escape }}</td>
+				<td>{{ url_hit.hash|escape }}</td>
+				<td>{{ url_hit.ip|escape }}</td>
+				<td>{{ url_hit.loc_cc|escape }}</td>
+				<td>{{ url_hit.loc_cn|escape }}</td>
+				<td>{{ url_hit.loc_rc|escape }}</td>
+				<td>{{ url_hit.loc_rn|escape }}</td>
+				<td>{{ url_hit.loc_ct|escape }}</td>
+				<td>{{ url_hit.loc_zc|escape }}</td>
+				<td>{{ url_hit.loc_ll|escape }}</td>
+				<td>{{ url_hit.uagent|escape }}</td>
+				<td>{{ url_hit.created_at|escape }}</td>
+			<tr/>	
+    	{% endfor %}
+		</table>
+		    	
+    	<br />
+    	<br />
+    	
+    	<a href="/">Create Url</a> | <a href="/view-urls">View Urls</a>
+
+	</body>
+</html>
+

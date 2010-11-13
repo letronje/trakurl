@@ -1,0 +1,27 @@
+<html>
+	<body>
+		<table border="1">
+			<tr>
+				<th>Country</th>
+				<th>Region</th>	
+				<th>Url</th>
+				<th>Hits</th>
+			</tr>
+		{% for ruhits in ruhits_list %}
+			<tr>
+				<td>{{ ruhits.country|escape }}</td>
+				<td>{{ ruhits.region|escape }}</td>
+				<td>{{ ruhits.url|escape }}</td>
+				<td>{{ ruhits.hits|escape }}</td>
+			<tr/>	
+    	{% endfor %}
+		</table>
+		    	
+    	<br />
+    	<br />
+    	
+    	<a href="/">Create Url</a> | <a href="/urls">View Urls</a>
+
+	</body>
+</html>
+

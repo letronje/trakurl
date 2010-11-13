@@ -1,0 +1,29 @@
+<html>
+	<body>
+		<table border="1">
+			<tr>
+				<th>Country</th>
+				<th>Region</th>
+				<th>City</th>
+				<th>Ip</th>
+				<th>Hits</th>
+			</tr>
+		{% for ihits in ihits_list %}
+			<tr>
+				<td>{{ ihits.country|escape }}</td>
+				<td>{{ ihits.region|escape }}</td>
+				<td>{{ ihits.city|escape }}</td>
+				<td>{{ ihits.ip|escape }}</td>
+				<td>{{ ihits.hits|escape }}</td>
+			<tr/>	
+    	{% endfor %}
+		</table>
+		    	
+    	<br />
+    	<br />
+    	
+    	<a href="/">Create Url</a> | <a href="/urls">View Urls</a>
+
+	</body>
+</html>
+

@@ -1,0 +1,29 @@
+<html>
+	<body>
+		<table border="1">
+			<tr>
+				<th>Country</th>
+				<th>City</th>	
+				<th>Url</th>
+				<th>Hits</th>
+				<th>Created At</th>
+			</tr>
+		{% for cuhits in cuhits_list %}
+			<tr>
+				<td>{{ cuhits.country|escape }}</td>
+				<td>{{ cuhits.city|escape }}</td>
+				<td>{{ cuhits.url|escape }}</td>
+				<td>{{ cuhits.hits|escape }}</td>
+				<td>{{ cuhits.created_at|escape }}</td>
+			<tr/>	
+    	{% endfor %}
+		</table>
+		    	
+    	<br />
+    	<br />
+    	
+    	<a href="/">Create Url</a> | <a href="/urls">View Urls</a>
+
+	</body>
+</html>
+

@@ -1,0 +1,14 @@
+ip_geo_info:
+id, ip_address, location
+
+
+UrlHit:
+
+id, url, hash, ip, user_agent, created_at
+
+
+UrlHash:
+
+id, url, hash, hits, created_at
+
+

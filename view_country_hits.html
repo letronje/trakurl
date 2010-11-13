@@ -1,0 +1,23 @@
+<html>
+	<body>
+		<table border="1">
+			<tr>
+				<th>Country</th>
+				<th>Hits</th>
+			</tr>
+		{% for chits in chits_list %}
+			<tr>
+				<td>{{ chits.country|escape }}</td>
+				<td>{{ chits.hits|escape }}</td>
+			<tr/>	
+    	{% endfor %}
+		</table>
+		    	
+    	<br />
+    	<br />
+    	
+    	<a href="/">Create Url</a> | <a href="/urls">View Urls</a>
+
+	</body>
+</html>
+

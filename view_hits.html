@@ -1,0 +1,33 @@
+<html>
+	<body>
+		<table border="1">
+			<tr>
+				<th>Url</th>
+				<th>IP</th>
+				<th>CN</th>
+				<th>RN</th>
+				<th>CT</th>
+				<th>User Agent</th>
+				<th>Created At</th>
+			</tr>
+		{% for url_hit in url_hits %}
+			<tr>
+				<td>{{ url_hit.url|escape }}</td>
+				<td>{{ url_hit.ip|escape }}</td>
+				<td>{{ url_hit.loc_cn|escape }}</td>
+				<td>{{ url_hit.loc_rn|escape }}</td>
+				<td>{{ url_hit.loc_ct|escape }}</td>
+				<td>{{ url_hit.uagent|escape }}</td>
+				<td>{{ url_hit.created_at|escape }}</td>
+			<tr/>	
+    	{% endfor %}
+		</table>
+		    	
+    	<br />
+    	<br />
+    	
+    	<a href="/">Create Url</a> | <a href="/urls">View Urls</a>
+
+	</body>
+</html>
+

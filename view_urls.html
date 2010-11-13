@@ -1,0 +1,33 @@
+<html>
+	<body>
+		<table border="1">
+			<tr>
+				<th>Url</th>
+				<th>Hits</th>
+				<th>Link</th>
+				<th>Country</th>
+				<th>Region</th>
+				<th>City</th>
+				<th>IP</th>
+			</tr>
+		{% for url_hash in url_hashes%}
+			<tr>
+				<td>{{ url_hash.url|escape }}</td>
+				<td>{{ url_hash.hits|escape }}</td>
+				<td><a href="/goto?{{ url_hash.hash|escape }}" >Go</a></td>
+				<td><a href="/cuhits?{{ url_hash.hash|escape }}" >Go</a></td>
+				<td><a href="/ruhits?{{ url_hash.hash|escape }}" >Go</a></td>
+				<td><a href="/ctuhits?{{ url_hash.hash|escape }}" >Go</a></td>
+				<td><a href="/iuhits?{{ url_hash.hash|escape }}" >Go</a></td>
+			<tr/>	
+    	{% endfor %}
+		</table>
+		    	
+    	<br />
+    	<br />
+    	
+    	<a href="/">Create Url</a> | <a href="/hits">View Hits</a>
+
+	</body>
+</html>
+
